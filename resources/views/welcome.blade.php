@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    njir njir kedua
+    njir njir uslukusluk.jp
 </body>
 
 </html>
