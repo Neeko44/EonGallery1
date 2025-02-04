@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>njir</title>
+    <title>Usluk</title>
 </head>
 
 <body>
-    njir njir kedua
+    target hari ini coba buat auth
 </body>
 
 </html>
