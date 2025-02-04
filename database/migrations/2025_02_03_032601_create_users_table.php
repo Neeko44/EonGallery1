@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->increments('ID_USER');
-            $table->unsignedInteger('ID_MUSEUM');
+            $table->unsignedInteger('ID_MUSEUM')->nullable();
             $table->string('NAMA_USER', 30);
             $table->string('FOTO_USER', 255)->nullable();
             $table->string('EMAIL', 100)->unique();
-            $table->string('PASSWORD', 50);
+            $table->string('PASSWORD', 255);
             $table->string('ROLE', 20)->nullable();
         });
     }
