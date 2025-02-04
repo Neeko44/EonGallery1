@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         // Foreign key untuk tabel users
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('user', function (Blueprint $table) {
             $table->foreign('ID_MUSEUM')->references('ID_MUSEUM')->on('museum');
         });
 
@@ -32,7 +32,7 @@ return new class extends Migration
 
         // Foreign key untuk tabel tickets
         Schema::table('tickets', function (Blueprint $table) {
-            $table->foreign('ID_USER')->references('ID_USER')->on('users');
+            $table->foreign('ID_USER')->references('ID_USER')->on('user');
             $table->foreign('ID_ORDER')->references('ID_ORDER')->on('order_items');
             $table->foreign('ID_MUSEUM')->references('ID_MUSEUM')->on('museum');
         });
@@ -41,7 +41,7 @@ return new class extends Migration
 
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('user', function (Blueprint $table) {
             $table->dropForeign(['ID_MUSEUM']);
         });
 
